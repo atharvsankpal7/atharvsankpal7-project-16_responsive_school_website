@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* color */
+    --wrapper-image-border: goldenrod;
+    --info-section-image-border: steelblue;
+    /* width */
+    --clamp-width: clamp(200px, 70%, 700px);
+}
+
+img {
+    border-radius: 100vw;
+    width: clamp(125px, 25vw, 200px);
+}
+
+.heading {
+    font-size: 2em;
+    font-weight: 600;
+    margin: .5em 0;
+}
+
+nav {
+    padding: .5rem 0;
+    display: flex;
+    align-items: center;
+    background-color: rgba(240, 255, 255, 0.133);
+    backdrop-filter: blur(6px);
+    width: clamp(250px, 100%, 1000px);
+    margin: auto;
+    position: sticky;
+}
+
+nav ul {
+    display: flex;
+    margin: auto;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 50%;
+}
+
+nav ul li {
+    list-style: none;
+    text-align: center;
+    padding: 3px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    transition: color .2s ease;
+    font-weight: 600;
+    font-size: larger;
+}
+
+nav ul li a:hover {
+    color: rgb(255, 1, 1);
+    text-decoration: underline;
+}
+
+nav ul li a:focus {
+    color: rgb(43, 1, 255);
+    text-decoration: underline;
+}
+
+nav input {
+    width: 1rem;
+}
+
+nav img {
+    width: 50px;
+    border: chocolate 2px solid;
+    cursor: pointer;
+}
+
+
+
+@media (min-width:455px) {
+    .wrapper {
+        display: flex;
+    }
+
+    .wrapper-heading,
+    .wrapper-info {
+        margin: 0;
+    }
+
+    .information-section {
+        display: flex;
+    }
+
+    #info_sec_2 {
+        flex-direction: row-reverse;
+    }
+}
+
+.wrapper-container {
+    background: rgba(0, 0, 0, 0.479) url('/wp4816765-nebula-4k-wallpapers.jpg');
+    background-position: center;
+    background-size: cover;
+    color: white;
+    background-blend-mode: darken;
+}
+
+.wrapper {
+    padding: 10vmin 10px;
+    /* display: flex; */
+    margin: auto;
+    width: var(--clamp-width);
+    /* align-items: center; */
+
+}
+
+
+.wrapper_sec_2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper img {
+    border: 5px solid var(--wrapper-image-border);
+}
+
+
+
+.wrapper-heading,
+.wrapper-info {
+    width: 75%;
+    margin: auto;
+}
+
+.wrapper-info {
+    margin-bottom: 2rem;
+}
+
+.information-section {
+    margin: 1rem auto;
+    width: var(--clamp-width);
+    gap: 2em;
+}
+
+.info-sec-img {
+    width: min-content;
+    margin: auto;
+}
+
+.information-section img {
+    border: 5px solid var(--info-section-image-border);
+}
